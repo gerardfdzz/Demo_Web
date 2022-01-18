@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio web empresa de deportes">
+    <meta name="author" content="Gerard Fernández García">
+    <title>Presupuestos</title>
+    <link rel="shortcut icon" href="/media/logo.jpg">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/7701e79680.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header id="encabezadoPresupuestos">
+
+        <nav id="navBar">
+
+            <a href="#encabezadoPresupuestos">
+                <img src="/media/logo.jpg" id="logo" alt="Logo de la empresa">
+            </a>
+
+            <ul>
+                <li class="list">
+                    <a href="index.html">
+                        <span class="icon">
+                                <ion-icon name="home-outline"></ion-icon>
+                            </span>
+                        <span class="text">Inicio</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="portfolio.html">
+                        <span class="icon">
+                                <ion-icon name="images-outline"></ion-icon>
+                            </span>
+                        <span class="text">Galería</span>
+                    </a>
+                </li>
+                <li class="list active">
+                    <a href="presupuesto.html">
+                        <span class="icon">
+                                <ion-icon name="help-outline"></ion-icon>
+                            </span>
+                        <span class="text">Presupuestos</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="contacto.html">
+                        <span class="icon">
+                                <ion-icon name="information-outline"></ion-icon>
+                            </span>
+                        <span class="text">Contacto</span>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <!-- Formulario que compruebe los datos introducidos por el usuario -->
+        <div class="contenedorFormulario">
+
+            <form action="presupuesto.html" id="formulario">
+
+                <div class="fila">
+                    <div class="grupoInputs">
+                        <input type="text" id="nombre" required>
+                        <label for="nombre"><ion-icon name="person-outline"></ion-icon> Nombre</label>
+                    </div>
+                    <div class="grupoInputs">
+                        <input type="tel" id="numero" pattern="[0-9]{9}" required>
+                        <label for="numero"><ion-icon name="call-outline"></ion-icon> Teléfono (ex. 123456789)</label>
+                    </div>
+                </div>
+
+                <div class="grupoInputs">
+                    <input type="email" id="email" required>
+                    <label for="email"><ion-icon name="mail-outline"></ion-icon> Email</label>
+                </div>
+                <div class="grupoInputs">
+                    <textarea id="mensaje" rows="8" required></textarea>
+                    <label for="mensaje"><ion-icon name="chatbubble-outline"></ion-icon> Solicite más información</label>
+                </div>
+                <div class="check">
+                    <input type="checkbox" id="politicaPrivacidad" value="Aceptar" required>
+                    <label for="politicaPrivacidad">Aceptar Política de Privacidad</label>
+                </div>
+                <button type="submit">ENVIAR</button>
+
+            </form>
+
+        </div>
+
+    </header>
+
+    <!--pie de página con los logotipos de varias redes sociales, la dirección de la empresa y el aviso legal-->
+    <footer id="footer">
+        <ul>
+            <li>
+                <!-- <a href="#"> --><i class="fab fa-whatsapp"></i>
+                <!-- </a> -->
+            </li>
+            <li>
+                <!-- <a href="#"> --><i class="fab fa-twitter"></i>
+                <!-- </a> -->
+            </li>
+            <li>
+                <!-- <a href="#"> --><i class="fab fa-youtube"></i>
+                <!-- </a> -->
+            </li>
+        </ul>
+        <p class="avisoLegal">© 2022 The Gol Nord™ Company | All rights reserved</p>
+        <a class="policy" href="/extra/politicaPrivacidad.html" target="_blank">The Gol Nord Privacy Policy</a>
+        <p class="direccion">C. d'Arístides Maillol, 12</p>
+    </footer>
+
+</body>
+
+</html>

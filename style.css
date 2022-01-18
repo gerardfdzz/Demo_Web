@@ -1,0 +1,644 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Desactivo la ventana emergente de ion-icons usando el bloqueo de eventos CSS ya que sin ello, cuando el mouse está hover el icono muestra un texto describiendo a este */
+
+ion-icon {
+    pointer-events: none;
+}
+
+
+/* Menú de navegación */
+
+#encabezadoIndex {
+    width: 100%;
+    height: 1000px;
+    background-color: #929292;
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)), url(../media/fondo.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+#encabezadoGaleria {
+    width: 100%;
+    height: 1000px;
+    background-color: #929292;
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)), url(../media/imgGaleria8.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+#encabezadoPresupuestos {
+    width: 100%;
+    height: 1000px;
+    background-color: #929292;
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)), url(../media/imgGaleria2.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+#encabezadoContacto {
+    width: 100%;
+    height: 1000px;
+    background-color: #929292;
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)), url(../media/imgGaleria6.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    /*justify-content: center;*/
+    width: 100%;
+    height: 100px;
+    background-color: rgb(36, 36, 36);
+    font-size: 1.5em;
+    position: fixed;
+    z-index: 1;
+}
+
+#logo {
+    width: auto;
+    height: 100%;
+    float: left;
+    display: block;
+    padding: 10px;
+}
+
+#navBar ul {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#navBar ul li {
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    margin: 0 40px;
+}
+
+#navBar ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(50, 50, 50);
+    text-align: center;
+}
+
+#navBar ul li a .icon {
+    position: relative;
+    line-height: 75px;
+    transition: 0.5s;
+    font-size: 40px;
+}
+
+#navBar ul li a:hover .icon {
+    /* Cuando situo en cursor encima de cada <a> en el navegador, empequeñezco el icono y le cambio el color para resaltar esta acción */
+    font-size: 30px;
+    transform: translateY(-6px);
+    color: rgb(152, 152, 152);
+    transition: 0.5s;
+}
+
+#navBar ul li.active a .icon {
+    /* Cambio el color y tamaño del icono con la classe active para resaltar la página en la que está actualmente el usuario */
+    font-size: 30px;
+    transform: translateY(-6px);
+    color: white;
+}
+
+#navBar ul li a .text {
+    position: absolute;
+    font-size: 15px;
+    color: white;
+    bottom: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+    transform: scale(0);
+}
+
+#navBar ul li a:hover .text {
+    /* Cuando situo en cursor encima de cada <a> en el navegador, aparece el texto con la función scale(1) con el mismo color que el icono para resaltar esta acción */
+    transform: scale(1);
+    color: rgb(152, 152, 152);
+    transition: 0.5s;
+}
+
+#navBar ul li.active a .text {
+    /* Cambio el color del texto con la classe active para resaltar la página en la que está actualmente el usuario */
+    transform: scale(1);
+    color: white;
+}
+
+#tituloEncabezadoIndex {
+    font-size: 16em;
+    text-align: center;
+    position: relative;
+    top: 200px;
+    color: white;
+    text-shadow: 0px 10px 5px #000000;
+    font-weight: normal;
+    animation-name: fadeTitulo;
+    animation-duration: 5s;
+}
+
+#subtituloEncabezadoIndex {
+    font-size: 4em;
+    text-align: center;
+    position: relative;
+    top: 130px;
+    color: white;
+    text-shadow: 0px 10px 5px #000000;
+    font-weight: normal;
+    opacity: 0;
+    animation-name: fadeSubtitulo;
+    animation-duration: 5s;
+    animation-delay: 0.75s;
+    animation-fill-mode: forwards;
+}
+
+
+/* Animación del título y subtítulo del encabezado de la página de inicio */
+
+@keyframes fadeTitulo {
+    0% {
+        opacity: 0;
+        top: 300px;
+    }
+    50% {
+        opacity: 1;
+        top: 300px;
+    }
+    100% {
+        opacity: 1;
+        top: 200px;
+    }
+}
+
+@keyframes fadeSubtitulo {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Primera sección de la página de inicio */
+
+#sobreNosotros {
+    width: 100%;
+    height: 800px;
+    background-color: rgb(50, 50, 50);
+    overflow: hidden;
+}
+
+.tituloSeccion1 {
+    font-size: 5rem;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 100px;
+    color: white;
+}
+
+#contenedorSeccion1 {
+    width: 1200px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    overflow: hidden;
+}
+
+.columnaSeccion1 {
+    width: 50%;
+    height: 500px;
+    float: left;
+}
+
+#video {
+    width: calc(100% - 75px);
+    background-color: rgb(50, 50, 50);
+    height: 315px;
+    margin-right: 75px;
+}
+
+.columnaSeccion1 p {
+    text-align: justify;
+    font-size: 20px;
+    padding-left: 75px;
+    line-height: 1.75;
+    color: white;
+}
+
+
+/* Segunda sección de la página de inicio */
+
+#servicios {
+    width: 100%;
+    height: 800px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.tituloSeccion2 {
+    font-size: 5rem;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 100px;
+    color: rgb(36, 36, 36);
+}
+
+#contenedorSeccion2 {
+    width: 1200px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    overflow: hidden;
+}
+
+.columnaSeccion2 {
+    width: 75%;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.columnaSeccion2 p {
+    text-align: justify;
+    font-size: 25px;
+    padding-left: 75px;
+    line-height: 1.75;
+    color: rgb(36, 36, 36);
+}
+
+
+/* Tercera sección de la página de inicio */
+
+#FAQS {
+    width: 100%;
+    height: 800px;
+    background-color: rgb(50, 50, 50);
+    overflow: hidden;
+}
+
+.tituloSeccion3 {
+    font-size: 5rem;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 100px;
+    color: white;
+}
+
+#contenedorSeccion3 {
+    width: 1200px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.columnaSeccion3 {
+    /* Divido el contenedor de la sección en 4 columnas iguales (25%) y las separo entre si con un padding de 30px en ambos lados*/
+    width: 25%;
+    height: 500px;
+    float: left;
+    padding: 0 30px;
+}
+
+.columnaSeccion3 .pregunta {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+
+.columnaSeccion3 .respuesta {
+    text-align: justify;
+    font-size: 20px;
+    line-height: 1.75;
+    color: white;
+}
+
+
+/* Cuadricula de la galeria */
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;
+    /* La propiedad transform-style CSS establece si el elemento hijo esta posicionado en el espacio 3D (preserve-3d) */
+    transform-style: preserve-3d;
+    /* El tiempo determina la "velocidad" a la que la galería va. Tarda 30s en dar la vuelta completa. */
+    animation: animate 30s linear infinite;
+    top: 425px;
+}
+
+@keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.galeria span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    /* Esta línea es importante ya que el número de grados por los que se multiplica (36) viene dado por la cantidad de fotos que añades a la galeria, en mi caso 10. Si fueran 8, se multiplicaría por 45deg. De no ajustar correctamente los grados de rotació correspondientes a la cantidad de fotos añadidas, estas se solaparían entre si y no se verían todas, sino que se verían todas las posibles respecto a los grados añadidos */
+    transform: rotateY(calc(var(--i) * 36deg)) translateZ(400px);
+    /* Se puede comporbar con esta línea, que solo se muestran 8 fotos en la galería, en vez de mostrar las 10 que hay añadidas en el html*/
+    /*transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);*/
+}
+
+.galeria span img {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    /* Añado un reflejo a 0px de distancia y con un degradado de 1/3 de la imagen */
+    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, transparent, #0004);
+}
+
+.galeria span img:hover {
+    /* La función CSS scale() define una transformación que modifica el tamaño de un elemento en el plano 2D.  */
+    /* Aumento el tamaño de la imagen y le quito el reflejo */
+    transform: scale(1.25, 1.25);
+    -webkit-box-reflect: unset;
+    cursor: pointer;
+}
+
+
+/* Formulario que compruebe los datos introducidos por el usuario*/
+
+.contenedorFormulario {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 210px;
+    width: 90%;
+    height: 680px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#formulario {
+    width: 90%;
+    max-width: 600px;
+}
+
+.grupoInputs {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.check {
+    margin-bottom: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#formulario .grupoInputs input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid white;
+    color: white;
+    background: transparent;
+    font-size: 15px;
+}
+
+#formulario textarea {
+    resize: none;
+}
+
+#formulario .grupoInputs label {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: white;
+    cursor: text;
+    transition: 0.2s;
+}
+
+#formulario .check label {
+    color: white;
+    padding-left: 10px;
+}
+
+#formulario .politicaPrivacidad {
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+#formulario button {
+    padding: 10px 0;
+    color: white;
+    outline: none;
+    background: transparent;
+    border: 1px solid white;
+    width: 100%;
+    cursor: pointer;
+}
+
+#formulario .grupoInputs input:focus~label,
+#formulario .grupoInputs input:valid~label,
+#formulario .grupoInputs textarea:focus~label,
+#formulario .grupoInputs textarea:valid~label {
+    /* Levantar el label situado dentro del input cuando clickas dentro de este, o está rellenado. Diferencio los inputs que tienen que rellenarse con texto (nombre, telefono, etc) con la clase .grupoInputs, del input y el label de política de privacidad porque sino fuera así, estos tambíen cambiarían su tamaño al hacer click sobre ellos y sería una mala UX.*/
+    top: -35px;
+    font-size: 14px;
+}
+
+.fila {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fila .grupoInputs {
+    flex-basis: 45%;
+}
+
+
+/* Mapa con la ubicación de la empresa, así como los datos de la empresa */
+
+.contenedorContacto {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 210px;
+    width: 90%;
+    height: 680px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mapa {
+    width: 90%;
+    max-width: 600px;
+    float: left;
+}
+
+.datos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 550px;
+    float: left;
+    font-size: 20px;
+    color: white;
+    font-weight: normal;
+}
+
+
+/* Pie de página */
+
+#footer {
+    width: 100%;
+    height: 100px;
+    background-color: #242424;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#footer ul {
+    position: relative;
+    display: flex;
+}
+
+#footer ul li {
+    position: relative;
+    list-style: none;
+    height: 33px;
+    margin: 15px 40px;
+    cursor: pointer;
+}
+
+#footer ul li
+/*a*/
+
+{
+    text-decoration: none;
+}
+
+#footer ul li
+/*a*/
+
+.fab {
+    font-size: 2em;
+    color: rgb(50, 50, 50);
+}
+
+#footer ul li::before {
+    font-family: fontAwesome;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 2em;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+
+/* Para cada red social hay un "unicode", que es el dato que hay en el content (el logo), para cuando haga el hover sobre el icono, se muestre este con su color original*/
+
+#footer ul li:nth-child(1)::before {
+    content: '\f232';
+    color: #25d366;
+    border-bottom: 1px solid #25d366;
+}
+
+#footer ul li:nth-child(2)::before {
+    content: '\f099';
+    color: #1da1f2;
+    border-bottom: 1px solid #1da1f2;
+}
+
+#footer ul li:nth-child(3)::before {
+    content: '\f167';
+    color: #ff0000;
+    border-bottom: 1px solid #ff0000;
+}
+
+#footer ul li:hover:before {
+    height: 100%;
+}
+
+#footer p {
+    position: absolute;
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+}
+
+#footer p.avisoLegal {
+    margin-top: 50px;
+}
+
+#footer p.direccion {
+    margin-top: 80px;
+}
+
+#footer a.policy {
+    position: absolute;
+    float: left;
+    margin-top: 65px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+#footer a.policy:hover {
+    cursor: pointer;
+    color: #1080d0;
+    text-decoration: none;
+}
